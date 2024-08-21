@@ -1,10 +1,7 @@
 #!/bin/sh
 
-# Fetch and execute the logo.sh script from your GitHub repository
-curl -s https://raw.githubusercontent.com/aMaheshr/nodes/main/logo.sh | bash
-
 # Pause for 4 seconds
-sleep 4
+sleep 1
 
 sudo apt-get update && sudo apt get upgrade -y
 clear
@@ -215,4 +212,5 @@ echo "getMessage.js script created."
 echo "Running getMessage.js..."
 npx hardhat run scripts/getMessage.js --network swisstronik
 echo "Message retrieved."
+npx hardhat verify --network <network_name> <contract_address> <constructor>
 echo " Follow: https://x.com/CryptoCrocks"
